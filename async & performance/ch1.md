@@ -9,7 +9,8 @@ Practically all nontrivial programs ever written (especially in JS) have in some
 
 In fact, the relationship between the *now* and *later* parts of your program is at the heart of asynchronous programming.
 
-Asynchronous programming has been around since the beginning of JS, for sure. But most JS developers have never really carefully considered exactly how and why it crops up in their programs, or explored various *other* ways to handle it. The *good enough* approach has always been the humble callback function. Many to this day will insist that callbacks are more than sufficient.
+Asynchronous programming has been around since the beginning of JS, for sure. But most JS developers have never really carefully considered exactly how and why it crops up in their programs, or explored various *other* ways to handle it. The *good enough* approach has always been the humble callback function. Many to this day will insist that callbacks are more than sufficient.but apart from callback system .The programmer can be carefull about at the time of programming and do synchronous programming intead of asynchronous.
+
 
 But as JS continues to grow in both scope and complexity, to meet the ever-widening demands of a first-class programming language that runs in browsers and servers and every conceivable device in between, the pains by which we manage asynchrony are becoming increasingly crippling, and they cry out for approaches that are both more capable and more reason-able.
 
@@ -17,7 +18,7 @@ While this all may seem rather abstract right now, I assure you we'll tackle it 
 
 But before we can get there, we're going to have to understand much more deeply what asynchrony is and how it operates in JS.
 
-## A Program in Chunks
+## A Program in  various Chunks (function)
 
 You may write your JS program in one *.js* file, but your program is almost certainly comprised of several chunks, only one of which is going to execute *now*, and the rest of which will execute *later*. The most common unit of *chunk* is the `function`.
 
@@ -880,7 +881,7 @@ While JS semantics thankfully protect us from the *observable* nightmares that c
 
 Compiler statement reordering is almost a micro-metaphor for concurrency and interaction. As a general concept, such awareness can help you understand async JS code flow issues better.
 
-## Review
+## Review of the program in JS
 
 A JavaScript program is (practically) always broken up into two or more chunks, where the first chunk runs *now* and the next chunk runs *later*, in response to an event. Even though the program is executed chunk-by-chunk, all of them share the same access to the program scope and state, so each modification to state is made on top of the previous state.
 
